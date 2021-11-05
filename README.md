@@ -18,3 +18,26 @@ The brain is a muscle, and if you practice long enough (by playing my game) that
 -HTML
 -JavaScript
 -CSS
+
+# Getting Started
+
+https://mattl999.github.io/Simon/
+
+##Rules
+- As the player, your only job is to watch and remember the sequence of lights that flash.
+- You then must repeat the pattern on your set of buttons.
+- If you do this correctly you will move on to the next round.
+- The next round will make the sequence longer by one.
+- Correctly copy the pattern for as long as you can!
+
+## Additional Features
+- Background music can be muted using the mute button
+- Alien will taunt you every few rounds
+
+## Future Enhacements
+
+- Responsive design for more screen sizes
+- More sound Effects
+- High Score feature
+
+
