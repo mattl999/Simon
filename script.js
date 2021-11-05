@@ -75,25 +75,25 @@ function sound(src, id = "") {
   };
 }
 
-let soundTrack = new sound("/sounds/soundtrack.mp3", "soundTracks");
+let soundTrack = new sound("/assets/sounds/soundtrack.mp3", "soundTracks");
 const songo = document.getElementById("soundTracks");
 songo.volume = 0.09;
 
-let introSound = new sound("/sounds/intro.mp3", "introTracks");
+let introSound = new sound("/assets/sounds/intro.mp3", "introTracks");
 const introo = document.getElementById("introTracks");
 introo.volume = 0.1;
-const sound1 = new sound("/sounds/button1Sound.wav", "butt1");
+const sound1 = new sound("/assets/sounds/button1Sound.wav", "butt1");
 document.getElementById("butt1").volume = 0.3;
 
-const sound2 = new sound("/sounds/Button2Sound.wav");
-const sound3 = new sound("/sounds/button3sound.wav", "butt3");
+const sound2 = new sound("/assets/sounds/Button2Sound.wav");
+const sound3 = new sound("/assets/sounds/button3sound.wav", "butt3");
 document.getElementById("butt3").volume = 0.3;
-const sound4 = new sound("/sounds/button4sound.wav");
-const correctSound = new sound("/sounds/Correct.wav");
+const sound4 = new sound("/assets/sounds/button4sound.wav");
+const correctSound = new sound("/assets/sounds/Correct.wav");
 
-const alienSound = new sound("/sounds/alienSound.wav");
-const wrongSound = new sound("/sounds/Wrong.wav");
-const deathSound = new sound("/sounds/Death.wav", "deathNoise");
+const alienSound = new sound("/assets/sounds/alienSound.wav");
+const wrongSound = new sound("/assets/sounds/Wrong.wav");
+const deathSound = new sound("/assets/sounds/Death.wav", "deathNoise");
 document.getElementById("deathNoise").volume = 0.3;
 
 const soundArr = [alienSound, sound1, sound2, sound3, sound4];
@@ -163,7 +163,7 @@ function init() {
     introSound.stop();
     soundTrack.stop();
     songo.currentTime = 0;
-    soundTrack.src = "/sounds/blank.mp3";
+    soundTrack.src = "/assets/sounds/blank.mp3";
     document.getElementById("soundTracks").volume = 0.05;
     setTimeout(function () {
       soundTrack.play();

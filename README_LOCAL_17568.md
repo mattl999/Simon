@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 
 # Galactic Simon :alien:
 
-=======
-# Simon
-# Galactic Simon :alien:
-
->>>>>>> gh-pages
 Welcome to Simon (In Space)!
 
 Simon is a memory game that challenges the player to memorize and repeat increasingly long sequences of colours. The original Simon was launched in 1978 as an electronic toy that was manufactured by Milton Bradley. The game was an instant success, and is manufactured and sold to this day!
@@ -24,7 +18,4 @@ The brain is a muscle, and if you practice long enough (by playing my game) that
 -HTML
 -JavaScript
 -CSS
-<<<<<<< HEAD
 
-=======
->>>>>>> gh-pages
