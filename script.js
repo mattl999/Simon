@@ -36,11 +36,11 @@ const muteMusic = document.getElementById("mute");
 const muteSfx = document.getElementById("sfx");
 
 const msgArray = [
-  "<span>Your Turn,</span>",
+  "<span>Your Turn</span>",
   "<span>&darr;&darr; Watch Closely &darr;&darr;</span>",
   "<span>Press the Start Button to Begin.</span>",
   "<span>👽:Yes! All Humans Shall Fall Before Me!</span>",
-  "<span>👽:Press the Restart Button to try again.</span>",
+  "<span>👽: Press the Restart Button to try again.</span>",
   "<span>👽: Don\x27t get distracted by this message</span>",
   "<span>👽: What was it?...Blue green red red?</span>",
   "<span>👽: Kneel before me Sapien!</span>",
@@ -219,7 +219,7 @@ function mute() {
     document.getElementById("soundTracks").volume = 0;
     muteMusic.innerText = "un-mute";
   } else {
-    muteMusic.innerText = "mute music";
+    muteMusic.innerText = "mute";
 
     document.getElementById("introTracks").volume = 0.2;
     document.getElementById("soundTracks").volume = 0.2;
