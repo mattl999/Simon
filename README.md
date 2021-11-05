@@ -1,4 +1,4 @@
-# Simon
+
 # Galactic Simon :alien:
 
 Welcome to Simon (In Space)!
