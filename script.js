@@ -47,7 +47,7 @@ const msgArray = [
   "<span>👽: You\x27ll never defeat me!</span>",
   "<span>👽: Your earthly brain is no match for me!</span>",
   "<span>👽: Yes, do as I say.</span>",
-  "<span> 👽: prepare for annihilation,</span>",
+  "<span> 👽: prepare for annihilation</span>",
 ];
 const wrongArray = [
   "wrong!",
@@ -77,24 +77,24 @@ function sound(src, id = "") {
 
 let soundTrack = new sound("/sounds/soundtrack.mp3", "soundTracks");
 const songo = document.getElementById("soundTracks");
-songo.volume = 0.11;
+songo.volume = 0.09;
 
 let introSound = new sound("/sounds/intro.mp3", "introTracks");
 const introo = document.getElementById("introTracks");
-introo.volume = 0.2;
+introo.volume = 0.1;
 const sound1 = new sound("/sounds/button1Sound.wav", "butt1");
-document.getElementById("butt1").volume = 0.6;
+document.getElementById("butt1").volume = 0.3;
 
 const sound2 = new sound("/sounds/Button2Sound.wav");
 const sound3 = new sound("/sounds/button3sound.wav", "butt3");
-document.getElementById("butt3").volume = 0.6;
+document.getElementById("butt3").volume = 0.3;
 const sound4 = new sound("/sounds/button4sound.wav");
 const correctSound = new sound("/sounds/Correct.wav");
 
 const alienSound = new sound("/sounds/alienSound.wav");
 const wrongSound = new sound("/sounds/Wrong.wav");
 const deathSound = new sound("/sounds/Death.wav", "deathNoise");
-document.getElementById("deathNoise").volume = 0.5;
+document.getElementById("deathNoise").volume = 0.3;
 
 const soundArr = [alienSound, sound1, sound2, sound3, sound4];
 
@@ -164,7 +164,7 @@ function init() {
     soundTrack.stop();
     songo.currentTime = 0;
     soundTrack.src = "/sounds/blank.mp3";
-    document.getElementById("soundTracks").volume = 0.2;
+    document.getElementById("soundTracks").volume = 0.05;
     setTimeout(function () {
       soundTrack.play();
     }, 500);
