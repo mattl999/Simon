@@ -12,7 +12,7 @@ The brain is a muscle, and if you practice long enough (by playing my game) that
 
 # Screenshots :camera:
 ![Alt text](https://github.com/mattl999/Simon/blob/gh-pages/assets/Photos/Simon1.png?raw=true)
-![Alt text](https://github.com/mattl999/Simon/blob/main/Photos/Simon2.png?raw=true)
+![Alt text](https://github.com/mattl999/Simon/blob/gh-pages/assets/Photos/Simon2.png?raw=true)
 
 ## Technologies Used:
 -HTML
