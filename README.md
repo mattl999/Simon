@@ -8,7 +8,7 @@ Simon is a memory game that challenges the player to memorize and repeat increas
 # Brain-Training :muscle:
 Simon is a fun and engaging game, with the benefit of testing and improving your memory while you play! The game requires lots of focus, and the smallest distraction can prevent you from reaching your new highscore. The current world record in a game of Simon is 84, set by a Canadian Simon enthusiast! 
 
-The brain is a muscle, and if you practice long enough (by playing my game) that record can one day be yours!
+The brain is like a muscle, and if you practice long enough (by playing my game) that record can one day be yours!
 
 # Screenshots :camera:
 ![Alt text](https://github.com/mattl999/Simon/blob/gh-pages/assets/Photos/Simon1.png?raw=true)
