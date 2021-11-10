@@ -75,25 +75,44 @@ function sound(src, id = "") {
   };
 }
 
-let soundTrack = new sound("/assets/sounds/soundtrack.mp3", "soundTracks");
+let soundTrack = new sound("./assets/sounds/soundtrack.mp3", "soundTracks");
 const songo = document.getElementById("soundTracks");
-songo.volume = 0.09;
+songo.volume = 0.01;
 
-let introSound = new sound("/assets/sounds/intro.mp3", "introTracks");
+
+let introSound = new sound("./assets/sounds/intro.mp3", "introTracks");
 const introo = document.getElementById("introTracks");
-introo.volume = 0.1;
-const sound1 = new sound("/assets/sounds/button1Sound.wav", "butt1");
-document.getElementById("butt1").volume = 0.3;
+introo.volume = 0.04;
 
-const sound2 = new sound("/assets/sounds/Button2Sound.wav");
-const sound3 = new sound("/assets/sounds/button3sound.wav", "butt3");
-document.getElementById("butt3").volume = 0.3;
-const sound4 = new sound("/assets/sounds/button4sound.wav");
-const correctSound = new sound("/assets/sounds/Correct.wav");
 
-const alienSound = new sound("/assets/sounds/alienSound.wav");
-const wrongSound = new sound("/assets/sounds/Wrong.wav");
-const deathSound = new sound("/assets/sounds/Death.wav", "deathNoise");
+const sound1 = new sound("./assets/sounds/button1Sound.wav", "butt1");
+document.getElementById("butt1").volume = 0.1;
+
+
+const sound2 = new sound("./assets/sounds/Button2Sound.wav", "butt2");
+document.getElementById("butt2").volume = 0.1;
+
+
+const sound3 = new sound("./assets/sounds/button3sound.wav", "butt3");
+document.getElementById("butt3").volume = 0.1;
+
+
+const sound4 = new sound("./assets/sounds/button4sound.wav", "butt4");
+document.getElementById("butt4").volume = 0.1;
+
+
+const correctSound = new sound("./assets/sounds/Correct.wav", "correct");
+document.getElementById("correct").volume = 0.1;
+
+
+const alienSound = new sound("./assets/sounds/alienSound.wav");
+
+
+const wrongSound = new sound("./assets/sounds/Wrong.wav","wrong");
+document.getElementById("wrong").volume = 0.1;
+
+
+const deathSound = new sound("./assets/sounds/Death.wav", "deathNoise");
 document.getElementById("deathNoise").volume = 0.3;
 
 const soundArr = [alienSound, sound1, sound2, sound3, sound4];
@@ -153,7 +172,7 @@ function msgTest() {
 
 muteMusic.addEventListener("click", mute);
 
-soundTrack.volume = 0.02;
+soundTrack.volume = 0.01;
 
 //Init Function
 
@@ -163,7 +182,7 @@ function init() {
     introSound.stop();
     soundTrack.stop();
     songo.currentTime = 0;
-    soundTrack.src = "/assets/sounds/blank.mp3";
+    soundTrack.src = "./assets/sounds/blank.mp3";
     document.getElementById("soundTracks").volume = 0.05;
     setTimeout(function () {
       soundTrack.play();
@@ -221,8 +240,8 @@ function mute() {
   } else {
     muteMusic.innerText = "mute";
 
-    document.getElementById("introTracks").volume = 0.2;
-    document.getElementById("soundTracks").volume = 0.2;
+    document.getElementById("introTracks").volume = 0.01;
+    document.getElementById("soundTracks").volume = 0.01;
   }
 }
 

@@ -484,19 +484,19 @@ audio {
   justify-content: center;
   align-items: center;
   margin-top: 5px;
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: url(/assets/Photos/galaxy3.png);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: url(./assets/Photos/galaxy3.png);
   
   -webkit-text-stroke-width: 1.6px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 @font-face {
   font-family: "outage";
-  src: url(/assets/Fonts/Outage\ Cut.ttf);
+  src: url(./assets/Fonts/Outage\ Cut.ttf);
   font-style: normal;
 }
 @font-face {
   font-family: "mission";
-  src: url(/assets/Fonts/SpaceMission-rgyw9.otf);
+  src: url(./assets/Fonts/SpaceMission-rgyw9.otf);
   font-style: normal;
 }
 #message {
@@ -530,17 +530,17 @@ audio {
 }
 @font-face {
   font-family: "alarm";
-  src: url(/assets/Fonts/TickingTimebombBB.ttf);
+  src: url(./assets/Fonts/TickingTimebombBB.ttf);
   font-style: normal;
 }
 @font-face {
   font-family: "alarm2";
-  src: url(/assets/Fonts/digital-7.ttf);
+  src: url(./assets/Fonts/digital-7.ttf);
   font-style: normal;
 }
 @font-face {
   font-family: outage1;
-  src: url(/assets/Fonts/Outage.ttf);
+  src: url(./assets/Fonts/Outage.ttf);
   font-style: normal;
 }
 #health {
