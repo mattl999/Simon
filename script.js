@@ -150,7 +150,7 @@ let muted = 0;
 let restarted = 0;
 let score = 0;
 let scoreGain = 1;
-introSound.play();
+// introSound.play();
 function disableButtons() {
   button1.removeEventListener("click", makeChoice);
   button2.removeEventListener("click", makeChoice);
@@ -184,9 +184,8 @@ function init() {
     songo.currentTime = 0;
     soundTrack.src = "./assets/sounds/blank.mp3";
     document.getElementById("soundTracks").volume = 0.05;
-    setTimeout(function () {
-      soundTrack.play();
-    }, 500);
+    // soundTrack.play();
+    
     player = [];
     alien = [];
     playerIdx = [];
@@ -195,7 +194,7 @@ function init() {
     msgIdx = 0;
     round = 0;
     score = 0;
-    scoreGain = 100;
+    scoreGain = 1;
     innerScore.textContent = score;
     r = randomNum();
     m = randomMsgNum();

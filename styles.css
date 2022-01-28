@@ -5,6 +5,7 @@ body {
   background-size: auto;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 @keyframes hovering {
   0% {
@@ -77,6 +78,8 @@ body {
 }
 #top-container {
   height: 12vh;
+  min-height: 124px;
+  max-height: 150px;
   background: linear-gradient(
     180deg,
     #696969 0%,
@@ -88,7 +91,7 @@ body {
   color: white;
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 1fr 45%;
+  grid-template-rows: 1fr 40%;
   overflow: hidden;
 }
 .op-button {
@@ -96,12 +99,12 @@ body {
   font-family: mission;
   background-color: #505050;
   /* background-image: url(/Photos/galaxy.jpg); */
-  border:2px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   font-size: 33px;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  color:white;
+  color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
 }
@@ -109,7 +112,7 @@ body {
   grid-column-start: 1;
   grid-row-start: 1;
   color: white;
-  
+
   font-size: 28px;
   text-align: center;
   height: 53.02px;
@@ -120,10 +123,10 @@ body {
   display: none;
   font-size: 25px;
   text-align: center;
-  
+
   height: 53.02px;
 }
-#score{
+#score {
   font-family: outage1;
   grid-column-start: 4;
   grid-row-start: 1;
@@ -208,7 +211,7 @@ body {
 }
 #btn-container {
   background: linear-gradient(to bottom, #bcc6cc, #eee, #64696d);
-  opacity:.95;
+  opacity: 0.95;
   border-radius: 50%;
   height: 95%;
   width: 100%;
@@ -483,12 +486,15 @@ audio {
   color: rgb(70, 70, 70);
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: url(./assets/Photos/galaxy3.png);
-  
+  padding-top: 1.8vh;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url(./assets/Photos/galaxy3.png);
+  overflow: hidden;
   -webkit-text-stroke-width: 1.6px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
 }
+
 @font-face {
   font-family: "outage";
   src: url(./assets/Fonts/Outage\ Cut.ttf);
@@ -499,19 +505,28 @@ audio {
   src: url(./assets/Fonts/SpaceMission-rgyw9.otf);
   font-style: normal;
 }
-#message {
+.msg-holder {
   grid-row-start: 2;
   grid-column-start: 2;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#message {
+  
   font-family: alarm2;
   font-style: normal;
-  color: rgb(12, 161, 12);
-  font-size: 170%;
+  font-size: 28px;
 
-  display: flex;
+  color: rgb(24, 196, 24);
+  
+  width:100%;
+ display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: 10px;
-  margin-bottom: 1%;
+  margin-bottom: .75%;
   background-color: black;
   border: 3px solid rgb(114, 114, 114);
   border-radius: 20px;
@@ -519,13 +534,28 @@ audio {
   max-height: 70%;
   overflow: hidden;
 }
-#message span {
-  position:absolute;
+@media only screen and (min-height: 900px) {
+  #title {
+    font-size: 61px;
+  }
+#message {
+  font-size: 28px;
+}
 
 }
+
+@media only screen and (min-height: 1200px) {
+  #title {
+    font-size: 75px;
+  }
+  #message {
+    font-size: 32px;
+  }
+}
+
 #message img {
   height: 40px;
-  position:absolute;
+  position: absolute;
   overflow: hidden;
 }
 @font-face {
@@ -568,7 +598,7 @@ audio {
   height: 60%;
   margin: 0 6% 10% 6%;
   border-radius: 10%;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
