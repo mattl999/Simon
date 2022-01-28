@@ -102,18 +102,18 @@ document.getElementById("butt4").volume = 0.1;
 
 
 const correctSound = new sound("./assets/sounds/Correct.wav", "correct");
-document.getElementById("correct").volume = 0.1;
+document.getElementById("correct").volume = 0.2;
 
 
 const alienSound = new sound("./assets/sounds/alienSound.wav");
 
 
 const wrongSound = new sound("./assets/sounds/Wrong.wav","wrong");
-document.getElementById("wrong").volume = 0.1;
+document.getElementById("wrong").volume = 0.2;
 
 
 const deathSound = new sound("./assets/sounds/Death.wav", "deathNoise");
-document.getElementById("deathNoise").volume = 0.3;
+document.getElementById("deathNoise").volume = 0.1;
 
 const soundArr = [alienSound, sound1, sound2, sound3, sound4];
 
@@ -150,7 +150,7 @@ let muted = 0;
 let restarted = 0;
 let score = 0;
 let scoreGain = 1;
-// introSound.play();
+introSound.play();
 function disableButtons() {
   button1.removeEventListener("click", makeChoice);
   button2.removeEventListener("click", makeChoice);
@@ -184,7 +184,7 @@ function init() {
     songo.currentTime = 0;
     soundTrack.src = "./assets/sounds/blank.mp3";
     document.getElementById("soundTracks").volume = 0.05;
-    // soundTrack.play();
+    soundTrack.play();
     
     player = [];
     alien = [];
