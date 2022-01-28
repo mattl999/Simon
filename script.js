@@ -149,7 +149,7 @@ let guessIdx = 0;
 let muted = 0;
 let restarted = 0;
 let score = 0;
-let scoreGain = 100;
+let scoreGain = 1;
 introSound.play();
 function disableButtons() {
   button1.removeEventListener("click", makeChoice);
@@ -364,8 +364,8 @@ function makeChoice(evt) {
       if (!missed) {
         correctSound.play();
         buttonPanel.setAttribute("class", "nice");
-        scoreGain = scoreMult(scoreGain);
-        score = Math.ceil(Math.floor(score + scoreGain) / 10) * 10;
+        
+        score = score + scoreGain;
         innerScore.textContent = score;
         setTimeout(function () {
           buttonPanel.classList.remove("nice");
