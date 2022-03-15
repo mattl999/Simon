@@ -23,7 +23,7 @@ The brain is like a muscle, and if you practice long enough (by playing my game)
 
 https://mattl999.github.io/Simon/
 
-##Rules
+## Rules
 - As the player, your only job is to watch and remember the sequence of lights that flash.
 - You then must repeat the pattern on your set of buttons.
 - If you do this correctly you will move on to the next round.
