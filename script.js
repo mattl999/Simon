@@ -28,7 +28,7 @@ const music = document.getElementById("song");
 
 const scoreBox = document.getElementById("score");
 
-const innerScore = document.querySelector("#score p");
+const innerScore = document.querySelector(".score-value");
 //bottom buttons
 const startButton = document.getElementById("start");
 const playAgainButton = document.getElementById("play-again");
@@ -150,7 +150,7 @@ let muted = 0;
 let restarted = 0;
 let score = 0;
 let scoreGain = 1;
-introSound.play();
+// introSound.play();
 function disableButtons() {
   button1.removeEventListener("click", makeChoice);
   button2.removeEventListener("click", makeChoice);
@@ -180,11 +180,11 @@ function init() {
   restarted++;
   if (restarted < 2) {
     introSound.stop();
-    soundTrack.stop();
+    soundTrack.play();
     songo.currentTime = 0;
     soundTrack.src = "./assets/sounds/blank.mp3";
     document.getElementById("soundTracks").volume = 0.05;
-    soundTrack.play();
+    // soundTrack.play();
     
     player = [];
     alien = [];
