@@ -48,6 +48,7 @@ const msgArray = [
   "<span>👽: Your earthly brain is no match for me!</span>",
   "<span>👽: Yes, do as I say.</span>",
   "<span> 👽: prepare for annihilation</span>",
+  '<span> Press the "Start" Button to Begin</span>'
 ];
 const wrongArray = [
   "wrong!",
@@ -105,7 +106,12 @@ const correctSound = new sound("./assets/sounds/Correct.wav", "correct");
 document.getElementById("correct").volume = 0.2;
 
 
-const alienSound = new sound("./assets/sounds/alienSound.wav");
+const alienSound = new sound("./assets/sounds/Alien.wav", "alienNoise");
+document.getElementById("alienNoise").volume = 0.3;
+
+const alienSound2 = new sound("./assets/sounds/Alien2.wav", "alienNoise2");
+document.getElementById("alienNoise2").volume = 0.3;
+
 
 
 const wrongSound = new sound("./assets/sounds/Wrong.wav","wrong");
@@ -114,6 +120,7 @@ document.getElementById("wrong").volume = 0.2;
 
 const deathSound = new sound("./assets/sounds/Death.wav", "deathNoise");
 document.getElementById("deathNoise").volume = 0.1;
+
 
 const soundArr = [alienSound, sound1, sound2, sound3, sound4];
 
@@ -142,6 +149,7 @@ let msgIdx = 0;
 let round = 0;
 let r = randomNum();
 let m = randomMsgNum();
+let alienSfx = 0;
 let missed = false;
 let wrong = 0;
 let guessNum = 0;
@@ -163,16 +171,16 @@ function disableButtons() {
 startButton.addEventListener("click", init);
 playAgainButton.addEventListener("click", init);
 
-function msgTest() {
-  let m = randomMsgNum();
-  console.log(m);
-  message.innerHTML = msgArray[m];
-}
+
 // startButton.addEventListener("click", init);
 
 muteMusic.addEventListener("click", mute);
 
 soundTrack.volume = 0.01;
+
+//Onload message prompt
+message.setAttribute("class", "bot-padding");
+message.innerHTML = msgArray[12];
 
 //Init Function
 
@@ -198,6 +206,7 @@ function init() {
     innerScore.textContent = score;
     r = randomNum();
     m = randomMsgNum();
+    alienSfx = 0;
     missed = false;
     guessNum = 0;
     guessIdx = 0;
@@ -211,15 +220,18 @@ function init() {
     rocket3.style.visibility = "visible";
     startButton.style.display = "none";
     playAgainButton.style.display = "block";
+
+    message.classList.remove("bot-padding");
     message.innerHTML = msgArray[11];
     setTimeout(function () {
-      message.innerHTML = "3";
+      message.setAttribute("class", "bot-padding");
+      message.innerHTML = "<span>3</span>";
       setTimeout(function () {
-        message.innerHTML = "2";
+        message.innerHTML = "<span>2</span>";
         setTimeout(function () {
-          message.innerHTML = "1";
+          message.innerHTML = "<span>1</span>";
           setTimeout(function () {
-            message.innerHTML = "begin!";
+            message.innerHTML = "<span>begin!</span>";
             setTimeout(function () {
               alienLights();
             }, 1000);
@@ -251,7 +263,7 @@ function youDied() {
   setTimeout(function () {
     introSound.play();
   }, 2200);
-
+  message.classList.remove("bot-padding");
   message.innerHTML = msgArray[3];
   console.log("function is being activated");
   disableButtons();
@@ -292,6 +304,13 @@ function lightOff(arrIdx) {
       if (round % 3 === 1) {
         setTimeout(function () {
           let m = randomMsgNum();
+          if(alienSfx % 2 === 0){
+            alienSound2.play()
+          }
+          else{
+            alienSound.play()
+          }
+          alienSfx ++;
           message.innerHTML = msgArray[m];
         }, 1000);
       }
@@ -302,6 +321,7 @@ function lightOff(arrIdx) {
 
 function alienLights() {
   setTimeout(function () {
+    message.classList.remove("bot-padding");
     message.innerHTML = msgArray[1];
   }, 400);
 
@@ -362,12 +382,14 @@ function makeChoice(evt) {
 
       if (!missed) {
         correctSound.play();
-        buttonPanel.setAttribute("class", "nice");
+        buttonPanel.setAttribute("class", " nice");
         
         score = score + scoreGain;
         innerScore.textContent = score;
+        innerScore.setAttribute("class", "score-value grow");
         setTimeout(function () {
           buttonPanel.classList.remove("nice");
+          innerScore.classList.remove("grow")
         }, 1500);
       }
 
@@ -384,6 +406,7 @@ function playerTurn() {
     button3.addEventListener("click", makeChoice);
     button4.addEventListener("click", makeChoice);
     if (round % 3 !== 1) {
+      message.setAttribute("class", "bot-padding");
       message.innerHTML = msgArray[0];
     }
     player = [];
