@@ -24,11 +24,12 @@ The brain is like a muscle, and if you practice long enough (by playing my game)
 https://mattl999.github.io/Simon/
 
 ## Rules
-- As the player, your only job is to watch and remember the sequence of lights that flash.
-- You then must repeat the pattern on your set of buttons.
-- If you do this correctly you will move on to the next round.
-- The next round will make the sequence longer by one.
+- Watch and remember the sequence of lights that flash on the alien's board.
+- Repeat the pattern on your set of buttons.
+- If done correctly you will move on to the next round.
+- The next round will make the sequence longer by one!
 - Correctly copy the pattern for as long as you can!
+- You have 3 lives, and then the game ends.
 
 ## Additional Features
 - Background music can be muted using the mute button
