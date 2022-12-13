@@ -15,9 +15,9 @@ The brain is like a muscle, and if you practice long enough (by playing my game)
 ![Alt text](https://github.com/mattl999/Simon/blob/gh-pages/assets/Photos/Simon2.png?raw=true)
 
 ## Technologies Used:
--HTML
--JavaScript
--CSS
+- HTML 5
+- JavaScript
+- CSS
 
 # Getting Started
 
