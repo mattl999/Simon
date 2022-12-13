@@ -202,7 +202,7 @@ function init() {
     msgIdx = 0;
     round = 0;
     score = 0;
-    scoreGain = 1;
+    scoreGain = 100;
     innerScore.textContent = score;
     r = randomNum();
     m = randomMsgNum();
