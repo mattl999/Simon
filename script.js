@@ -157,7 +157,7 @@ let guessIdx = 0;
 let muted = 0;
 let restarted = 0;
 let score = 0;
-let scoreGain = 1;
+let scoreGain = 100;
 // introSound.play();
 function disableButtons() {
   button1.removeEventListener("click", makeChoice);
